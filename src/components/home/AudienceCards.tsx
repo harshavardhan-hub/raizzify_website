@@ -1,0 +1,90 @@
+'use client';
+
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import MagneticElement from '../MagneticElement';
+
+const AUDIENCES = [
+  {
+    title: "The Visionary Owner",
+    role: "Business Leaders",
+    desc: "You refuse to plateau. You need infrastructure that actively hunts growth—automating conversations, qualifying leads, and closing sales on WhatsApp while you sleep at the helm.",
+    alignment: "self-start",
+  },
+  {
+    title: "The Master Orchestrator",
+    role: "Event Organizers",
+    desc: "Average events are forgotten. You engineer experiences. We provide the unbreakable ticketing spine, frictionless payments, and data intelligence to sell out venues effortlessly.",
+    alignment: "self-center",
+  },
+  {
+    title: "The Relentless Builder",
+    role: "Startup Founders",
+    desc: "You don't want a generic agency. You want an elite strike team of IIT/ISB engineers to architecture a minimum viable empire, forged with unparalleled speed and precision.",
+    alignment: "self-end",
+  }
+];
+
+export default function AudienceCards() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        cardRefs.current,
+        { y: 100, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          stagger: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 80%",
+          }
+        }
+      );
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <section ref={containerRef} className="py-32 bg-[#FFFFFF] relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-8">
+        <h2 className="text-sm font-bold text-accent tracking-widest uppercase mb-16 text-center">Are You One Of These?</h2>
+        
+        <div className="flex flex-col space-y-12 md:space-y-0 md:grid md:grid-cols-3 gap-8">
+          {AUDIENCES.map((aud, i) => (
+            <div 
+              key={i} 
+              ref={(el) => { cardRefs.current[i] = el; }}
+              className={`w-full md:mt-[${i * 4}rem]`} 
+              style={{ marginTop: typeof window !== 'undefined' && window.innerWidth >= 768 ? `${i * 3}rem` : '0' }}
+            >
+              <MagneticElement intensity={0.05} className="h-full">
+                <div className="group h-full bg-surface p-10 rounded-2xl border border-gray-100 hover:border-accent shadow-sm hover:shadow-xl hover:shadow-accent/5 transition-all duration-500 cursor-pointer flex flex-col justify-between">
+                  <div>
+                    <div className="text-xs font-bold text-muted uppercase tracking-wider mb-2">{aud.role}</div>
+                    <h3 className="text-2xl font-display font-bold text-text mb-4 group-hover:text-accent transition-colors">{aud.title}</h3>
+                    <p className="text-muted leading-relaxed">{aud.desc}</p>
+                  </div>
+                  <div className="mt-8">
+                    <span className="text-accent text-sm font-semibold flex items-center">
+                      Explore Advantage 
+                      <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </MagneticElement>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
