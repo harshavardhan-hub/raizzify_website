@@ -69,12 +69,6 @@ export default function WhyRaizzify() {
               <h3 className="text-3xl md:text-5xl font-display font-bold text-white mb-3">Forged in India.</h3>
               <p className="text-blue-100 text-xl font-medium">Built to dominate globally.</p>
             </div>
-            
-            <MagneticElement intensity={0.2} className="relative z-10 w-full md:w-auto">
-              <button className="w-full bg-white text-text px-10 py-5 rounded-full font-bold text-base hover:bg-gray-50 transition-colors duration-300 shadow-xl">
-                Experience The Platform
-              </button>
-            </MagneticElement>
           </div>
         </div>
       </div>
