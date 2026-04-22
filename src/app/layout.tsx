@@ -22,6 +22,11 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -31,7 +36,7 @@ export const metadata: Metadata = {
     description: 'Shape your next digital venture with Raizzify. We provide elite engineering, business growth automation, and frictionless event ticketing solutions.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/opengraph-image.png',
         width: 1200,
         height: 630,
         alt: 'Raizzify - The Definitive Platform',
@@ -42,7 +47,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Raizzify | The Definitive Platform',
     description: 'Shape your next digital venture with Raizzify. We provide elite engineering, business growth automation, and frictionless event ticketing solutions.',
-    images: ['/og-image.jpg'],
+    images: ['/twitter-image.png'],
   },
   robots: {
     index: true,
