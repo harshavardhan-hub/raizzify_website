@@ -9,7 +9,7 @@ const AUDIENCES = [
     items: [
       {
         title: "Complete Product Design (UI/UX)",
-        desc: "Not just development — experience that users love.",
+        desc: "Not just development experience that users love.",
       },
       {
         title: "Industry-Grade Tech Architecture",
@@ -33,10 +33,10 @@ const AUDIENCES = [
     items: [
       {
         title: "Guidance From IITians & ISBians",
-        desc: "Strategy + execution — not just coding.",
+        desc: "Strategy + execution not just coding.",
       },
       {
-        title: "Long-Term Tech Partner — Not One-Time Vendor",
+        title: "Long-Term Tech Partner Not One-Time Vendor",
         desc: "",
       }
     ]
@@ -72,8 +72,8 @@ export default function AudienceCards() {
   return (
     <section ref={containerRef} className="py-32 bg-[#FFFFFF] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-8">
-        <h2 className="text-sm font-bold text-accent tracking-widest uppercase mb-8 text-center">Are You One Of These?</h2>        
-        
+        <h2 className="text-sm font-bold text-accent tracking-widest uppercase mb-8 text-center">Are You One Of These?</h2>
+
         <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-3 md:gap-4 mb-20 max-w-5xl mx-auto w-full">
           {[
             "A Founder with a Startup Idea, but no Tech Team",
@@ -82,7 +82,7 @@ export default function AudienceCards() {
             "A Company needing Scalable Tech — not just Code"
           ].map((text, i) => (
             <div key={i} style={{ color: '#0f172a', backgroundColor: '#f8fafc' }} className="w-full md:w-auto border border-gray-300 rounded-xl md:rounded-full px-5 py-3 md:px-6 md:py-3 text-sm md:text-base font-semibold shadow-sm hover:shadow-md hover:border-accent/50 transition-all flex items-center cursor-default">
-              <span className="mr-3 md:mr-2 text-lg md:text-base shrink-0">👉</span> 
+              <span className="mr-3 md:mr-2 text-lg md:text-base shrink-0">👉</span>
               <span className="!text-[#0f172a]">{text}</span>
             </div>
           ))}
@@ -90,10 +90,10 @@ export default function AudienceCards() {
 
         <div className="flex flex-col space-y-12 md:space-y-0 md:grid md:grid-cols-3 gap-8">
           {AUDIENCES.map((aud, i) => (
-            <div 
-              key={i} 
+            <div
+              key={i}
               ref={(el) => { cardRefs.current[i] = el; }}
-              className={`w-full md:mt-[${i * 4}rem]`} 
+              className={`w-full md:mt-[${i * 4}rem]`}
               style={{ marginTop: typeof window !== 'undefined' && window.innerWidth >= 768 ? `${i * 3}rem` : '0' }}
             >
               <MagneticElement intensity={0.05} className="h-full">
@@ -111,7 +111,7 @@ export default function AudienceCards() {
                   </div>
                   <div className="mt-8">
                     <span className={`text-sm font-semibold flex items-center ${i === 0 ? 'text-pink-600' : i === 1 ? 'text-blue-600' : 'text-purple-600'}`}>
-                      Explore Advantage 
+                      Explore Advantage
                       <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>

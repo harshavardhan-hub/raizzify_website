@@ -17,7 +17,7 @@ const STEPS = [
   },
   {
     title: "Bring More Customers Without Spending on Ads",
-    desc: "Organic growth powered by real nearby traffic — not expensive ads.",
+    desc: "Organic growth powered by real nearby traffic not expensive ads.",
     icon: Magnet
   },
   {
@@ -27,17 +27,17 @@ const STEPS = [
   },
   {
     title: "WhatsApp Marketing That Actually Works",
-    desc: "Reach customers directly where they respond — not ignore.",
+    desc: "Reach customers directly where they respond not ignore.",
     icon: MessageCircle
   },
   {
     title: "Turn Every Customer Into Repeat Business",
-    desc: "Feedback, offers & engagement — all automated.",
+    desc: "Feedback, offers & engagement all automated.",
     icon: Repeat
   },
   {
     title: "Be Part of a Business Ecosystem",
-    desc: "Not alone anymore — grow together with nearby businesses.",
+    desc: "Not alone anymore grow together with nearby businesses.",
     icon: Layers
   }
 ];
@@ -51,7 +51,7 @@ export default function HowItWorks() {
 
     // Determine total length of the SVG path
     const pathLength = pathRef.current.getTotalLength();
-    
+
     // Set up the dash array and offset to hide the line initially
     gsap.set(pathRef.current, {
       strokeDasharray: pathLength,
@@ -70,15 +70,15 @@ export default function HowItWorks() {
           scrub: true, // Perfect sync
         }
       });
-      
+
       // We can also stagger fade the step content
       gsap.utils.toArray('.step-card').forEach((step: any, index) => {
-        gsap.fromTo(step, 
+        gsap.fromTo(step,
           { opacity: 0, x: index % 2 === 0 ? 50 : -50 },
-          { 
-            opacity: 1, 
-            x: 0, 
-            duration: 1, 
+          {
+            opacity: 1,
+            x: 0,
+            duration: 1,
             ease: "power3.out",
             scrollTrigger: {
               trigger: step,
@@ -101,16 +101,16 @@ export default function HowItWorks() {
             Everything you need to grow — customers, marketing, and visibility — in one simple platform.
           </p>
         </div>
-        
+
         {/* The SVG Line that connects steps */}
         <div className="absolute left-[2.2rem] md:left-1/2 top-[16rem] bottom-16 w-1 md:-ml-0.5 z-0">
           <svg className="h-full w-full" preserveAspectRatio="none" viewBox="0 0 4 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
             <line x1="2" y1="0" x2="2" y2="1000" stroke="#E5E7EB" strokeWidth="4" />
-            <path 
+            <path
               ref={pathRef}
-              d="M2 0 V 1000" 
-              stroke="var(--color-accent)" 
-              strokeWidth="4" 
+              d="M2 0 V 1000"
+              stroke="var(--color-accent)"
+              strokeWidth="4"
               className="drop-shadow-[0_0_10px_rgba(0,85,255,0.8)]"
             />
           </svg>
@@ -124,12 +124,12 @@ export default function HowItWorks() {
               <div key={index} className={`step-card w-full flex flex-col md:flex-row items-start ${isEven ? 'md:flex-row-reverse' : ''}`}>
                 {/* Responsive spacing for desktop alternating grid */}
                 <div className="hidden md:block md:w-1/2" />
-                
+
                 {/* The Custom Node Matrix Dot */}
                 <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 bg-surface border-4 border-gray-100 rounded-full flex items-center justify-center shadow-lg group hover:border-accent transition-colors duration-300 z-20">
                   <Icon className="w-6 h-6 text-text group-hover:text-accent transition-colors" />
                 </div>
-                
+
                 <div className={`w-full md:w-1/2 pl-24 md:pl-0 ${isEven ? 'md:pr-16 text-left md:text-right' : 'md:pl-16 text-left'}`}>
                   <div className="bg-white p-8 rounded-2xl border border-gray-100 hover:border-accent/40 shadow-md hover:shadow-lg transition-all duration-300 w-full relative group">
                     <span
