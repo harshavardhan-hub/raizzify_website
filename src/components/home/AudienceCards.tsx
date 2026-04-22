@@ -6,21 +6,21 @@ import MagneticElement from '../MagneticElement';
 
 const AUDIENCES = [
   {
-    title: "The Visionary Owner",
+    title: "Are you a Business Owner?",
     role: "Business Leaders",
     desc: "You refuse to plateau. You need infrastructure that actively hunts growth—automating conversations, qualifying leads, and closing sales on WhatsApp while you sleep at the helm.",
     alignment: "self-start",
   },
   {
-    title: "The Master Orchestrator",
+    title: "Looking for an Event Ticketing Platform?",
     role: "Event Organizers",
-    desc: "Average events are forgotten. You engineer experiences. We provide the unbreakable ticketing spine, frictionless payments, and data intelligence to sell out venues effortlessly.",
+    desc: "We manage complete online ticketing for your events. From handling secure, frictionless payments to instantly delivering digital tickets, we ensure a flawless experience for your attendees.",
     alignment: "self-center",
   },
   {
-    title: "The Relentless Builder",
+    title: "Do you want to Build a Tech Product?",
     role: "Startup Founders",
-    desc: "You don't want a generic agency. You want an elite strike team of IIT/ISB engineers to architecture a minimum viable empire, forged with unparalleled speed and precision.",
+    desc: "We are an elite team that designs and builds cutting-edge products. With state-of-the-art websites and advanced features, we help you beat the competition and stay at the top.",
     alignment: "self-end",
   }
 ];
@@ -54,8 +54,7 @@ export default function AudienceCards() {
   return (
     <section ref={containerRef} className="py-32 bg-[#FFFFFF] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-8">
-        <h2 className="text-sm font-bold text-accent tracking-widest uppercase mb-16 text-center">Are You One Of These?</h2>
-        
+        <h2 className="text-sm font-bold text-accent tracking-widest uppercase mb-16 text-center">Are You One Of These?</h2>        
         <div className="flex flex-col space-y-12 md:space-y-0 md:grid md:grid-cols-3 gap-8">
           {AUDIENCES.map((aud, i) => (
             <div 
