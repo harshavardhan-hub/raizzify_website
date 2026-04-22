@@ -1,18 +1,14 @@
 'use client';
 
+import { useModal } from './ModalContext';
+
 export default function WhatsAppButton() {
-  // Format the number by removing spaces/plus signs if any
-  const phoneNumber = "917880096649";
-  const message = "Hello! I'm interested in your services.";
-  
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const { openModal } = useModal();
 
   return (
-    <a
-      href={whatsappUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[99] bg-[#25D366] hover:bg-[#20bd5a] text-white p-[14px] md:p-4 rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center group border-2 border-white/20"
+    <button
+      onClick={openModal}
+      className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[99] bg-[#25D366] hover:bg-[#20bd5a] text-white p-[14px] md:p-4 rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center group border-2 border-white/20 cursor-pointer"
       aria-label="Chat on WhatsApp"
     >
       <svg className="w-8 h-8 md:w-9 md:h-9 fill-current" viewBox="0 0 24 24">
@@ -22,6 +18,6 @@ export default function WhatsAppButton() {
       <span className="absolute right-full mr-4 bg-zinc-900 text-white text-sm px-4 py-2 rounded-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-300 hidden md:block shadow-lg pointer-events-none border border-white/10 translate-x-4 group-hover:translate-x-0 font-medium">
         Chat with us!
       </span>
-    </a>
+    </button>
   );
 }

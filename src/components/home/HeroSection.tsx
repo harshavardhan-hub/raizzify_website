@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import gsap from 'gsap';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { useModal } from '../ModalContext';
 
 const PATHWAYS = [
   {
@@ -38,6 +39,7 @@ export default function HeroSection() {
   const headerRef = useRef<HTMLDivElement>(null);
   const panelsRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
+  const { openModal } = useModal();
   
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
@@ -133,7 +135,7 @@ export default function HeroSection() {
             <motion.div
               key={path.id}
               className={`hero-panel relative flex flex-col justify-between rounded-3xl p-6 sm:p-8 md:p-10 transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden cursor-pointer group ${getThemeClasses(path.theme, isHovered)}`}
-              onClick={() => router.push(path.href)}
+              onClick={openModal}
               onMouseEnter={() => setHoveredIndex(index)}
               style={{
                 flex: typeof window !== 'undefined' && window.innerWidth >= 1024

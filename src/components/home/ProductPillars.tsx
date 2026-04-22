@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { useModal } from '../ModalContext';
 
 const SCENES = [
   {
@@ -30,6 +31,7 @@ const SCENES = [
 export default function ProductPillars() {
   const containerRef = useRef<HTMLDivElement>(null);
   const slidesRef = useRef<HTMLDivElement[]>([]);
+  const { openModal } = useModal();
 
   useEffect(() => {
     // Check if on mobile to possibly disable the massive pin if needed, 
@@ -76,7 +78,7 @@ export default function ProductPillars() {
               <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
                 {scene.subheadline}
               </p>
-              <button className="bg-accent text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-text transition-colors duration-300">
+              <button onClick={openModal} className="bg-accent text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-text transition-colors duration-300">
                 {scene.cta}
               </button>
             </div>

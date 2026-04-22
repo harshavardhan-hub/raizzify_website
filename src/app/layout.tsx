@@ -4,6 +4,7 @@ import ClientProviders from '@/components/ClientProviders';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import { ModalProvider } from '@/components/ModalContext';
 
 export const metadata: Metadata = {
   title: 'Raizzify | The Definitive Platform',
@@ -22,12 +23,14 @@ export default function RootLayout({
       </head>
       <body className="antialiased overflow-x-hidden w-full max-w-[100vw]">
         <ClientProviders>
-          <Navbar />
-          <main className="min-h-screen w-full overflow-x-clip">
-            {children}
-          </main>
-          <Footer />
-          <WhatsAppButton />
+          <ModalProvider>
+            <Navbar />
+            <main className="min-h-screen w-full overflow-x-clip">
+              {children}
+            </main>
+            <Footer />
+            <WhatsAppButton />
+          </ModalProvider>
         </ClientProviders>
       </body>
     </html>

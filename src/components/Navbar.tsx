@@ -3,9 +3,11 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useModal } from './ModalContext';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { openModal } = useModal();
 
   return (
     <>
@@ -21,9 +23,9 @@ export default function Navbar() {
             <a href="#reviews" className="hover:text-text transition-colors">Reviews</a>
             <a href="#industries" className="hover:text-text transition-colors">Industries</a>
           </nav>
-          <a href="#contact" className="hidden md:flex items-center justify-center bg-text text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-accent hover:text-white transition-all transform hover:-translate-y-0.5 shadow-sm">
+          <button onClick={openModal} className="hidden md:flex items-center justify-center bg-text text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-accent hover:text-white transition-all transform hover:-translate-y-0.5 shadow-sm">
             Contact
-          </a>
+          </button>
 
           {/* Mobile Menu Toggle */}
           <button className="md:hidden text-text relative z-50" onClick={() => setIsOpen(!isOpen)}>
@@ -81,9 +83,9 @@ export default function Navbar() {
                 transition={{ delay: 0.4, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                 className="mt-auto border-t border-gray-200/50 pt-8 flex flex-col space-y-8"
               >
-                <a href="#contact" onClick={() => setIsOpen(false)} className="w-full flex items-center justify-center bg-text text-white px-6 py-4 rounded-xl text-lg font-semibold shadow-md hover:bg-accent hover:shadow-xl transition-all transform hover:-translate-y-1">
+                <button onClick={() => { setIsOpen(false); openModal(); }} className="w-full flex items-center justify-center bg-text text-white px-6 py-4 rounded-xl text-lg font-semibold shadow-md hover:bg-accent hover:shadow-xl transition-all transform hover:-translate-y-1">
                   Contact
-                </a>
+                </button>
                 <div className="flex justify-between items-center text-sm font-medium text-muted">
                   <a href="#" className="hover:text-text transition-colors">Twitter</a>
                   <a href="#" className="hover:text-text transition-colors">LinkedIn</a>
