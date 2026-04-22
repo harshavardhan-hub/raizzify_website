@@ -7,8 +7,54 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import { ModalProvider } from '@/components/ModalContext';
 
 export const metadata: Metadata = {
-  title: 'Raizzify | The Definitive Platform',
-  description: 'Shape your next digital venture with Raizzify.',
+  metadataBase: new URL('https://www.raizzify.com'),
+  title: {
+    default: 'Raizzify | The Definitive Platform',
+    template: '%s | Raizzify'
+  },
+  description: 'Shape your next digital venture with Raizzify. We provide elite engineering, business growth automation, and frictionless event ticketing solutions.',
+  keywords: ['Raizzify', 'Business Automation', 'Event Ticketing', 'Tech Product Development', 'Digital Solutions', 'Startups', 'Software Engineering'],
+  authors: [{ name: 'Raizzify' }],
+  creator: 'Raizzify',
+  publisher: 'Raizzify',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://www.raizzify.com',
+    siteName: 'Raizzify',
+    title: 'Raizzify | The Definitive Platform',
+    description: 'Shape your next digital venture with Raizzify. We provide elite engineering, business growth automation, and frictionless event ticketing solutions.',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Raizzify - The Definitive Platform',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Raizzify | The Definitive Platform',
+    description: 'Shape your next digital venture with Raizzify. We provide elite engineering, business growth automation, and frictionless event ticketing solutions.',
+    images: ['/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
