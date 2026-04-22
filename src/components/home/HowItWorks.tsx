@@ -93,7 +93,7 @@ export default function HowItWorks() {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-32 bg-[#FAFAF9] relative overflow-hidden">
+    <section ref={containerRef} id="process" className="py-32 bg-[#FAFAF9] relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-8 relative">
         <div className="text-center mb-24 relative z-10">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-text mb-6">Turn Your Local Business Into a Customer Magnet</h2>

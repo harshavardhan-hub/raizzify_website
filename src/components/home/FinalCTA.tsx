@@ -30,7 +30,7 @@ export default function FinalCTA() {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-40 bg-[#F4F7FF] border-t border-blue-50 flex flex-col items-center justify-center relative overflow-hidden" data-aos="fade-in">
+    <section ref={containerRef} id="contact" className="py-40 bg-[#F4F7FF] border-t border-blue-50 flex flex-col items-center justify-center relative overflow-hidden" data-aos="fade-in">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,85,255,0.03)_0%,transparent_70%)] pointer-events-none" />
       
       <div className="max-w-5xl mx-auto px-8 text-center relative z-10">

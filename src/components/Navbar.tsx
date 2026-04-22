@@ -11,16 +11,19 @@ export default function Navbar() {
     <>
       <header className="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-6xl py-3 md:py-4 px-6 md:px-8 bg-white/70 backdrop-blur-lg border border-gray-200 rounded-2xl shadow-sm transition-all">
         <div className="flex items-center justify-between">
-          <h1 className="text-xl md:text-2xl font-bold tracking-tight text-text">Raizzify.</h1>
-          <nav className="space-x-8 text-sm font-medium text-muted hidden md:flex">
-            <a href="#" className="hover:text-text transition-colors">Products</a>
-            <a href="#" className="hover:text-text transition-colors">Solutions</a>
-            <a href="#" className="hover:text-text transition-colors">Pricing</a>
-            <a href="#" className="hover:text-text transition-colors">Company</a>
+          <div className="flex items-center gap-2 md:gap-3">
+            <img src="/raizzify_logo.png" alt="Raizzify Logo" className="w-7 h-7 md:w-9 md:h-9 object-contain" />
+            <h1 className="text-xl md:text-2xl font-bold tracking-tight text-text">Raizzify.</h1>
+          </div>
+          <nav className="absolute left-1/2 -translate-x-1/2 space-x-8 text-sm font-medium text-muted hidden md:flex">
+            <a href="#features" className="hover:text-text transition-colors">Features</a>
+            <a href="#process" className="hover:text-text transition-colors">Process</a>
+            <a href="#reviews" className="hover:text-text transition-colors">Reviews</a>
+            <a href="#industries" className="hover:text-text transition-colors">Industries</a>
           </nav>
-          <button className="hidden md:block bg-text text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-accent hover:text-white transition-all transform hover:-translate-y-0.5 shadow-sm">
-            Get Started
-          </button>
+          <a href="#contact" className="hidden md:flex items-center justify-center bg-text text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-accent hover:text-white transition-all transform hover:-translate-y-0.5 shadow-sm">
+            Contact
+          </a>
 
           {/* Mobile Menu Toggle */}
           <button className="md:hidden text-text relative z-50" onClick={() => setIsOpen(!isOpen)}>
@@ -50,10 +53,15 @@ export default function Navbar() {
                 }}
                 className="flex flex-col space-y-2 mt-4"
               >
-                {['Products', 'Solutions', 'Pricing', 'Company'].map((item) => (
-                  <div key={item} className="overflow-hidden py-2">
+                {[
+                  { name: 'Features', href: '#features' },
+                  { name: 'Process', href: '#process' },
+                  { name: 'Reviews', href: '#reviews' },
+                  { name: 'Industries', href: '#industries' }
+                ].map((item) => (
+                  <div key={item.name} className="overflow-hidden py-2">
                     <motion.a 
-                      href="#" 
+                      href={item.href} 
                       variants={{
                         hidden: { y: "100%", opacity: 0, rotate: 2 },
                         visible: { y: "0%", opacity: 1, rotate: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } }
@@ -61,7 +69,7 @@ export default function Navbar() {
                       className="block text-5xl font-display font-medium text-text hover:text-accent transition-colors" 
                       onClick={() => setIsOpen(false)}
                     >
-                      {item}
+                      {item.name}
                     </motion.a>
                   </div>
                 ))}
@@ -73,9 +81,9 @@ export default function Navbar() {
                 transition={{ delay: 0.4, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                 className="mt-auto border-t border-gray-200/50 pt-8 flex flex-col space-y-8"
               >
-                <button className="w-full bg-text text-white px-6 py-4 rounded-xl text-lg font-semibold shadow-md hover:bg-accent hover:shadow-xl transition-all transform hover:-translate-y-1">
-                  Get Started
-                </button>
+                <a href="#contact" onClick={() => setIsOpen(false)} className="w-full flex items-center justify-center bg-text text-white px-6 py-4 rounded-xl text-lg font-semibold shadow-md hover:bg-accent hover:shadow-xl transition-all transform hover:-translate-y-1">
+                  Contact
+                </a>
                 <div className="flex justify-between items-center text-sm font-medium text-muted">
                   <a href="#" className="hover:text-text transition-colors">Twitter</a>
                   <a href="#" className="hover:text-text transition-colors">LinkedIn</a>

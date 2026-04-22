@@ -55,7 +55,7 @@ export default function IndustriesWeServe() {
   };
 
   return (
-    <section ref={containerRef} className="py-40 bg-zinc-950 text-white relative overflow-hidden">
+    <section ref={containerRef} id="industries" className="py-40 bg-zinc-950 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(0,85,255,0.15)_0%,transparent_50%)] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-8 relative z-10">

@@ -71,7 +71,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section ref={containerRef} className="bg-[#FFFFFF] py-20 md:py-0 md:h-screen flex items-center overflow-hidden">
+    <section ref={containerRef} id="reviews" className="bg-[#FFFFFF] py-20 md:py-0 md:h-screen flex items-center overflow-hidden">
       <div className="w-full">
         <div className="px-6 md:px-12 xl:px-24 mb-10 md:mb-16">
           <h2 className="text-3xl md:text-6xl font-display font-bold text-text">The Verdict.</h2>

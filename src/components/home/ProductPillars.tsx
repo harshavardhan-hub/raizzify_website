@@ -60,7 +60,7 @@ export default function ProductPillars() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative h-screen w-full overflow-hidden bg-black">
+    <section ref={containerRef} id="features" className="relative h-screen w-full overflow-hidden bg-black">
       {SCENES.map((scene, i) => (
         <div 
           key={i}

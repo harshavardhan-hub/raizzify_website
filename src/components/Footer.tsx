@@ -3,7 +3,10 @@ export default function Footer() {
     <footer className="bg-surface border-t border-gray-100 py-16 px-12 relative z-10">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
         <div>
-          <h2 className="text-2xl font-bold tracking-tight text-text mb-4">Raizzify.</h2>
+          <div className="flex items-center gap-3 mb-4">
+            <img src="/raizzify_logo.png" alt="Raizzify Logo" className="w-8 h-8 md:w-10 md:h-10 object-contain" />
+            <h2 className="text-2xl font-bold tracking-tight text-text">Raizzify.</h2>
+          </div>
           <p className="text-muted max-w-xs text-sm">
             The definitive platform to shape your next digital venture. Speed, precision, and performance combined.
           </p>
