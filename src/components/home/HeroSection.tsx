@@ -100,16 +100,18 @@ export default function HeroSection() {
     <section ref={containerRef} className="relative min-h-[100dvh] w-full flex flex-col pt-28 pb-8 lg:pb-12 overflow-hidden bg-white px-4 sm:px-6 lg:px-8">
       
       {/* Top Header Area */}
-      <div ref={headerRef} className="flex flex-col items-center justify-center text-center w-full max-w-5xl mx-auto z-20 mb-10 lg:mb-16 shrink-0 pt-4">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-bold leading-[1.1] tracking-tight text-black mb-6 w-full flex flex-wrap justify-center gap-x-3 sm:gap-x-4 overflow-hidden">
-          <span className="overflow-hidden pb-2"><div className="hero-title-word">We</div></span>
-          <span className="overflow-hidden pb-2"><div className="hero-title-word">build</div></span>
-          <span className="overflow-hidden pb-2"><div className="hero-title-word">the</div></span>
-          <span className="overflow-hidden pb-2"><div className="hero-title-word text-gray-400">tech.</div></span>
+      <div ref={headerRef} className="flex flex-col items-center justify-center text-center w-full max-w-7xl xl:max-w-[90rem] mx-auto z-20 mb-10 lg:mb-16 shrink-0 pt-4">
+        <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-[4rem] font-bold leading-[1.1] tracking-tight text-black mb-6 w-full flex flex-wrap justify-center gap-x-3 sm:gap-x-4 overflow-hidden">
+          <span className="overflow-hidden pb-2"><div className="hero-title-word">Raizzify</div></span>
+          <span className="overflow-hidden pb-2"><div className="hero-title-word">team</div></span>
+          <span className="overflow-hidden pb-2"><div className="hero-title-word">of</div></span>
+          <span className="overflow-hidden pb-2"><div className="hero-title-word text-gray-400">IITians</div></span>
+          <span className="overflow-hidden pb-2"><div className="hero-title-word text-gray-400">&amp;</div></span>
+          <span className="overflow-hidden pb-2"><div className="hero-title-word text-gray-400">ISBians.</div></span>
           <span className="w-full hidden md:block" />
-          <span className="overflow-hidden pb-2"><div className="hero-title-word">You</div></span>
-          <span className="overflow-hidden pb-2"><div className="hero-title-word">build</div></span>
-          <span className="overflow-hidden pb-2"><div className="hero-title-word">the</div></span>
+          <span className="overflow-hidden pb-2"><div className="hero-title-word">Architecting</div></span>
+          <span className="overflow-hidden pb-2"><div className="hero-title-word">your</div></span>
+          <span className="overflow-hidden pb-2"><div className="hero-title-word">digital</div></span>
           <span className="overflow-hidden pb-2"><div className="hero-title-word text-[#0055FF]">empire.</div></span>
         </h1>
         <p className="hero-sub text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl leading-relaxed font-body">
