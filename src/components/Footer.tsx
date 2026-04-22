@@ -10,8 +10,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <img src="/raizzify_logo.png" alt="Raizzify Logo" className="w-8 h-8 md:w-10 md:h-10 object-contain" />
-            <h2 className="text-2xl font-bold tracking-tight text-white">Raizzify.</h2>
+            <img src="/raizzify_logo.png" alt="Raizzify Logo" className="w-28 h-8 md:w-36 md:h-10 object-contain" />
           </div>
           <p className="text-zinc-400 max-w-xs text-sm">
             The definitive platform to shape your next digital venture. Speed, precision, and performance combined.
