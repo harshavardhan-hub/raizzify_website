@@ -7,7 +7,6 @@ import HowItWorks from '@/components/home/HowItWorks';
 import StatsRow from '@/components/home/StatsRow';
 import Testimonials from '@/components/home/Testimonials';
 import FinalCTA from '@/components/home/FinalCTA';
-import TransformationStory from '@/components/home/TransformationStory';
 import IndustriesWeServe from '@/components/home/IndustriesWeServe';
 
 export default function Home() {
@@ -21,7 +20,6 @@ export default function Home() {
       <HowItWorks />
       <StatsRow />
       <Testimonials />
-      <TransformationStory />
       <IndustriesWeServe />
       <FinalCTA />
     </>

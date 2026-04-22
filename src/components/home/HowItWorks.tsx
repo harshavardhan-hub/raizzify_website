@@ -2,28 +2,43 @@
 
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { Target, Zap, BarChart3, Rocket } from 'lucide-react';
+import { Globe, Users, Magnet, Tag, MessageCircle, Repeat, Layers } from 'lucide-react';
 
 const STEPS = [
   {
-    title: "Assess & Strategize",
-    desc: "We analyze your exact market positioning and bottleneck. No fluff, just brutal architectural blueprints for maximum leverage.",
-    icon: Target
+    title: "Get Your Own Smart Business Website",
+    desc: "No coding. No hassle. Your digital identity live in minutes.",
+    icon: Globe
   },
   {
-    title: "Build The Engine",
-    desc: "Our elite engineers construct the infrastructure. Whether it's an automated WhatsApp funnel or a highly scalable ticketing platform.",
-    icon: Zap
+    title: "Tap Into a Shared Customer Network",
+    desc: "Your business gets promoted across other local businesses automatically.",
+    icon: Users
   },
   {
-    title: "Deploy & Dominate",
-    desc: "We launch the system into production with zero downtime. Instant metrics, immediate results, relentless performance.",
-    icon: Rocket
+    title: "Bring More Customers Without Spending on Ads",
+    desc: "Organic growth powered by real nearby traffic — not expensive ads.",
+    icon: Magnet
   },
   {
-    title: "Scale Ruthlessly",
-    desc: "Post-launch, the architecture scales autonomously. We monitor, optimize, and expand your digital territory as traffic explodes.",
-    icon: BarChart3
+    title: "Run Offers, Coupons & Events From One Link",
+    desc: "One platform to manage everything your customers need.",
+    icon: Tag
+  },
+  {
+    title: "WhatsApp Marketing That Actually Works",
+    desc: "Reach customers directly where they respond — not ignore.",
+    icon: MessageCircle
+  },
+  {
+    title: "Turn Every Customer Into Repeat Business",
+    desc: "Feedback, offers & engagement — all automated.",
+    icon: Repeat
+  },
+  {
+    title: "Be Part of a Business Ecosystem",
+    desc: "Not alone anymore — grow together with nearby businesses.",
+    icon: Layers
   }
 ];
 
@@ -80,10 +95,15 @@ export default function HowItWorks() {
   return (
     <section ref={containerRef} className="py-32 bg-[#FAFAF9] relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-8 relative">
-        <h2 className="text-4xl md:text-5xl font-display font-bold text-center mb-24 text-text">How We Forge Empires</h2>
+        <div className="text-center mb-24 relative z-10">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-text mb-6">Turn Your Local Business Into a Customer Magnet</h2>
+          <p className="text-xl text-muted max-w-2xl mx-auto">
+            Everything you need to grow — customers, marketing, and visibility — in one simple platform.
+          </p>
+        </div>
         
         {/* The SVG Line that connects steps */}
-        <div className="absolute left-[2.2rem] md:left-1/2 top-[12rem] bottom-16 w-1 md:-ml-0.5 z-0">
+        <div className="absolute left-[2.2rem] md:left-1/2 top-[16rem] bottom-16 w-1 md:-ml-0.5 z-0">
           <svg className="h-full w-full" preserveAspectRatio="none" viewBox="0 0 4 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
             <line x1="2" y1="0" x2="2" y2="1000" stroke="#E5E7EB" strokeWidth="4" />
             <path 
@@ -111,9 +131,9 @@ export default function HowItWorks() {
                 </div>
                 
                 <div className={`w-full md:w-1/2 pl-24 md:pl-0 ${isEven ? 'md:pr-16 text-left md:text-right' : 'md:pl-16 text-left'}`}>
-                  <div className="bg-base p-8 rounded-2xl border border-gray-100 hover:border-accent/40 shadow-sm transition-all duration-300 w-full relative group">
+                  <div className="bg-white p-8 rounded-2xl border border-gray-100 hover:border-accent/40 shadow-md hover:shadow-lg transition-all duration-300 w-full relative group">
                     <span
-                      className={`absolute -top-4 text-5xl md:text-7xl font-bold text-accent/10 font-display pointer-events-none transition-transform group-hover:scale-110 ${isEven ? 'step-num-left' : 'step-num-right'}`}
+                      className={`absolute -top-4 text-3xl md:text-6xl font-bold text-accent/10 font-display pointer-events-none transition-transform group-hover:scale-110 ${isEven ? 'step-num-left' : 'step-num-right'}`}
                     >
                       0{index + 1}
                     </span>

@@ -45,16 +45,22 @@
 
 /* How We Forge Empires — step number positioning */
 .step-num-left {
-  left: -0.5rem;
+  left: -1.5rem;
   right: auto;
 }
+@media (min-width: 768px) {
+  .step-num-left {
+    left: -3rem;
+  }
+}
+
 .step-num-right {
-  left: -0.5rem; /* mobile: left corner */
+  left: -1.5rem; /* mobile: left corner, pushed more out */
   right: auto;
 }
 @media (min-width: 768px) {
   .step-num-right {
     left: auto;
-    right: -0.75rem; /* desktop: right corner for even cards */
+    right: -3rem; /* desktop: right corner, pushed more out */
   }
 }
