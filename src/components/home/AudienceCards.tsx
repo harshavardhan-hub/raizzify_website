@@ -6,22 +6,40 @@ import MagneticElement from '../MagneticElement';
 
 const AUDIENCES = [
   {
-    title: "Are you a Business Owner?",
-    role: "Business Leaders",
-    desc: "You refuse to plateau. You need infrastructure that actively hunts growth—automating conversations, qualifying leads, and closing sales on WhatsApp while you sleep at the helm.",
-    alignment: "self-start",
+    items: [
+      {
+        title: "Complete Product Design (UI/UX)",
+        desc: "Not just development — experience that users love.",
+      },
+      {
+        title: "Industry-Grade Tech Architecture",
+        desc: "Built for scale, speed, and real-world usage.",
+      }
+    ]
   },
   {
-    title: "Looking for an Event Ticketing Platform?",
-    role: "Event Organizers",
-    desc: "We manage complete online ticketing for your events. From handling secure, frictionless payments to instantly delivering digital tickets, we ensure a flawless experience for your attendees.",
-    alignment: "self-center",
+    items: [
+      {
+        title: "End-to-End Development",
+        desc: "From idea → design → development → deployment.",
+      },
+      {
+        title: "WhatsApp + Automation Integrations",
+        desc: "Built for today’s user behavior.",
+      }
+    ]
   },
   {
-    title: "Do you want to Build a Tech Product?",
-    role: "Startup Founders",
-    desc: "We are an elite team that designs and builds cutting-edge products. With state-of-the-art websites and advanced features, we help you beat the competition and stay at the top.",
-    alignment: "self-end",
+    items: [
+      {
+        title: "Guidance From IITians & ISBians",
+        desc: "Strategy + execution — not just coding.",
+      },
+      {
+        title: "Long-Term Tech Partner — Not One-Time Vendor",
+        desc: "",
+      }
+    ]
   }
 ];
 
@@ -54,7 +72,22 @@ export default function AudienceCards() {
   return (
     <section ref={containerRef} className="py-32 bg-[#FFFFFF] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-8">
-        <h2 className="text-sm font-bold text-accent tracking-widest uppercase mb-16 text-center">Are You One Of These?</h2>        
+        <h2 className="text-sm font-bold text-accent tracking-widest uppercase mb-8 text-center">Are You One Of These?</h2>        
+        
+        <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-3 md:gap-4 mb-20 max-w-5xl mx-auto w-full">
+          {[
+            "A Founder with a Startup Idea, but no Tech Team",
+            "A Business Owner wanting to scale Digitally",
+            "Someone tired of Freelancers & Broken Projects",
+            "A Company needing Scalable Tech — not just Code"
+          ].map((text, i) => (
+            <div key={i} style={{ color: '#0f172a', backgroundColor: '#f8fafc' }} className="w-full md:w-auto border border-gray-300 rounded-xl md:rounded-full px-5 py-3 md:px-6 md:py-3 text-sm md:text-base font-semibold shadow-sm hover:shadow-md hover:border-accent/50 transition-all flex items-center cursor-default">
+              <span className="mr-3 md:mr-2 text-lg md:text-base shrink-0">👉</span> 
+              <span className="!text-[#0f172a]">{text}</span>
+            </div>
+          ))}
+        </div>
+
         <div className="flex flex-col space-y-12 md:space-y-0 md:grid md:grid-cols-3 gap-8">
           {AUDIENCES.map((aud, i) => (
             <div 
@@ -66,9 +99,15 @@ export default function AudienceCards() {
               <MagneticElement intensity={0.05} className="h-full">
                 <div className={`group h-full ${i === 0 ? 'bg-[#FDF2F8]' : i === 1 ? 'bg-[#EFF6FF]' : 'bg-[#F5F3FF]'} p-10 rounded-2xl border border-white hover:border-accent shadow-sm hover:shadow-xl hover:shadow-accent/5 transition-all duration-500 cursor-pointer flex flex-col justify-between`}>
                   <div>
-                    <div className="text-xs font-bold text-muted uppercase tracking-wider mb-2">{aud.role}</div>
-                    <h3 className={`text-2xl font-display font-bold text-text mb-4 transition-colors ${i === 0 ? 'group-hover:text-pink-600' : i === 1 ? 'group-hover:text-blue-600' : 'group-hover:text-purple-600'}`}>{aud.title}</h3>
-                    <p className="text-muted leading-relaxed">{aud.desc}</p>
+                    {aud.items.map((item, idx) => (
+                      <div key={idx} className={idx > 0 ? "mt-8" : ""}>
+                        <h3 className={`text-xl font-display font-bold text-text mb-2 flex items-start transition-colors ${i === 0 ? 'group-hover:text-pink-600' : i === 1 ? 'group-hover:text-blue-600' : 'group-hover:text-purple-600'}`}>
+                          <span className="mr-2 mt-0.5">✔</span>
+                          <span className="leading-tight">{item.title}</span>
+                        </h3>
+                        {item.desc && <p className="text-muted leading-relaxed ml-7">{item.desc}</p>}
+                      </div>
+                    ))}
                   </div>
                   <div className="mt-8">
                     <span className={`text-sm font-semibold flex items-center ${i === 0 ? 'text-pink-600' : i === 1 ? 'text-blue-600' : 'text-purple-600'}`}>
@@ -83,6 +122,8 @@ export default function AudienceCards() {
             </div>
           ))}
         </div>
+
+
       </div>
     </section>
   );
