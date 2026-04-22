@@ -3,6 +3,7 @@ import './globals.css';
 import ClientProviders from '@/components/ClientProviders';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 export const metadata: Metadata = {
   title: 'Raizzify | The Definitive Platform',
@@ -26,6 +27,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <WhatsAppButton />
         </ClientProviders>
       </body>
     </html>
