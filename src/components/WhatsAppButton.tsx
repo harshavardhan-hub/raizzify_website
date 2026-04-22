@@ -3,11 +3,11 @@
 import { useModal } from './ModalContext';
 
 export default function WhatsAppButton() {
-  const { openModal } = useModal();
-
   return (
-    <button
-      onClick={openModal}
+    <a
+      href="https://wa.me/917880096649?text=Hello!%20I'm%20interested%20in%20your%20services."
+      target="_blank"
+      rel="noopener noreferrer"
       className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[99] bg-[#25D366] hover:bg-[#20bd5a] text-white p-[14px] md:p-4 rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center group border-2 border-white/20 cursor-pointer"
       aria-label="Chat on WhatsApp"
     >
@@ -18,6 +18,6 @@ export default function WhatsAppButton() {
       <span className="absolute right-full mr-4 bg-zinc-900 text-white text-sm px-4 py-2 rounded-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-300 hidden md:block shadow-lg pointer-events-none border border-white/10 translate-x-4 group-hover:translate-x-0 font-medium">
         Chat with us!
       </span>
-    </button>
+    </a>
   );
 }
