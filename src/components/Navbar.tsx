@@ -14,7 +14,7 @@ export default function Navbar() {
       <header className="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-6xl py-3 md:py-4 px-6 md:px-8 bg-white/70 backdrop-blur-lg border border-gray-200 rounded-2xl shadow-sm transition-all">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2 md:gap-3">
-            <img src="/raizzify_logo.png" alt="Raizzify Logo" className="w-28 h-7 md:w-36 md:h-9 object-contain" />
+            <img src="/raizzify_logo.png" alt="Raizzify Logo" className="w-28 h-7 md:w-36 md:h-9 object-contain object-left" />
           </div>
           <nav className="absolute left-1/2 -translate-x-1/2 space-x-8 text-sm font-medium text-muted hidden md:flex">
             <a href="#features" className="hover:text-text transition-colors">Features</a>
