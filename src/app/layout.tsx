@@ -7,9 +7,8 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import { ModalProvider } from '@/components/ModalContext';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.raizzify.com'),
   title: {
-    default: 'Raizzify | The Definitive Platform',
+    default: 'Raizzify | Architecting Your Digital Empire',
     template: '%s | Raizzify'
   },
   description: 'Shape your next digital venture with Raizzify. We provide elite engineering, business growth automation, and frictionless event ticketing solutions.',
@@ -30,22 +29,21 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.raizzify.com',
     siteName: 'Raizzify',
-    title: 'Raizzify | The Definitive Platform',
+    title: 'Raizzify | Architecting Your Digital Empire',
     description: 'Shape your next digital venture with Raizzify. We provide elite engineering, business growth automation, and frictionless event ticketing solutions.',
     images: [
       {
         url: '/opengraph-image.png',
         width: 1200,
         height: 630,
-        alt: 'Raizzify - The Definitive Platform',
+        alt: 'Raizzify - Architecting Your Digital Empire',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Raizzify | The Definitive Platform',
+    title: 'Raizzify | Architecting Your Digital Empire',
     description: 'Shape your next digital venture with Raizzify. We provide elite engineering, business growth automation, and frictionless event ticketing solutions.',
     images: ['/twitter-image.png'],
   },
