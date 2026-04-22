@@ -24,7 +24,7 @@ export default function Navbar() {
             <a href="#industries" className="hover:text-text transition-colors">Industries</a>
           </nav>
           <button onClick={openModal} className="hidden md:flex items-center justify-center bg-text text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-accent hover:text-white transition-all transform hover:-translate-y-0.5 shadow-sm">
-            Contact
+            Contact Us
           </button>
 
           {/* Mobile Menu Toggle */}
@@ -37,7 +37,7 @@ export default function Navbar() {
       {/* Full-Screen Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -45,7 +45,7 @@ export default function Navbar() {
             className="fixed inset-0 z-40 bg-white/98 backdrop-blur-2xl flex flex-col pt-[100px] px-8 pb-10 md:hidden overflow-hidden"
           >
             <div className="flex flex-col h-full justify-between">
-              <motion.div 
+              <motion.div
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
@@ -62,13 +62,13 @@ export default function Navbar() {
                   { name: 'Industries', href: '#industries' }
                 ].map((item) => (
                   <div key={item.name} className="overflow-hidden py-2">
-                    <motion.a 
-                      href={item.href} 
+                    <motion.a
+                      href={item.href}
                       variants={{
                         hidden: { y: "100%", opacity: 0, rotate: 2 },
                         visible: { y: "0%", opacity: 1, rotate: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } }
                       }}
-                      className="block text-5xl font-display font-medium text-text hover:text-accent transition-colors" 
+                      className="block text-5xl font-display font-medium text-text hover:text-accent transition-colors"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
@@ -76,8 +76,8 @@ export default function Navbar() {
                   </div>
                 ))}
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
