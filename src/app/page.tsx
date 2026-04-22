@@ -15,9 +15,9 @@ export default function Home() {
       <HeroSection />
       <TrustMarquee />
       <ProductPillars />
+      <HowItWorks />
       <WhyRaizzify />
       <AudienceCards />
-      <HowItWorks />
       <StatsRow />
       <Testimonials />
       <IndustriesWeServe />
