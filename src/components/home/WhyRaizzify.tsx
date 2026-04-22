@@ -40,9 +40,9 @@ export default function WhyRaizzify() {
           <div className="bento-item col-span-1 md:col-span-2 row-span-2 bg-[#0B1121] p-10 rounded-3xl border border-gray-800 flex flex-col justify-between group hover:border-[#0055FF] hover:shadow-2xl transition-all duration-500 overflow-hidden relative">
             <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-[#0055FF]/[0.15] rounded-full blur-3xl pointer-events-none group-hover:bg-[#0055FF]/[0.25] transition-colors duration-500"/>
             <div>
-              <div className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-6">The Talent</div>
-              <h3 className="text-4xl font-display font-bold text-white mb-6 leading-tight">Engineered by <br /> IITians & ISBians.</h3>
-              <p className="text-gray-400 leading-relaxed max-w-md text-lg">You are not outsourcing to a generic agency. You are arming yourself with an elite strike team trained at India's most ruthless academic institutions. We architect scale.</p>
+              <div className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-6">Delivery & Engagement</div>
+              <h3 className="text-4xl font-display font-bold text-white mb-6 leading-tight">WhatsApp-Based <br /> Ticket Delivery.</h3>
+              <p className="text-gray-400 leading-relaxed max-w-md text-lg">Send tickets instantly — no app downloads, no confusion. Plus, a built-in coupon system ensures every booking can drive future revenue with automatic offers.</p>
             </div>
           </div>
           
@@ -52,13 +52,13 @@ export default function WhyRaizzify() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
               </svg>
             </div>
-            <h3 className="text-2xl font-display font-bold text-white mb-3">Fort Knox Security</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">Military-grade encryption and unbreachable payment gateways.</p>
+            <h3 className="text-2xl font-display font-bold text-white mb-3">Zero Fake Entries</h3>
+            <p className="text-gray-400 text-sm leading-relaxed">Smart validation ensures every ticket is unique and secure. Real-time entry tracking lets you know exactly who entered and when.</p>
           </div>
           
           <div className="bento-item col-span-1 border border-gray-800 bg-[#18181B] p-10 rounded-3xl flex flex-col justify-end group hover:border-[#0055FF] hover:shadow-2xl transition-all duration-500">
-            <h3 className="text-2xl font-display font-bold text-white mb-3">End-to-End Control</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">From WhatsApp funnels to native apps. All managed in one unified operational spine.</p>
+            <h3 className="text-2xl font-display font-bold text-white mb-3">Integrated Payments</h3>
+            <p className="text-gray-400 text-sm leading-relaxed">Collect payments seamlessly with full tracking.</p>
           </div>
           
           <div className="bento-item col-span-1 md:col-span-3 bg-[#0055FF] p-10 md:p-14 rounded-3xl flex flex-col md:flex-row items-center justify-between group overflow-hidden relative">
@@ -66,8 +66,8 @@ export default function WhyRaizzify() {
             <div className="absolute w-64 h-64 bg-white/10 rounded-full blur-3xl -top-10 -left-10 pointer-events-none" />
             
             <div className="relative z-10 mb-8 md:mb-0">
-              <h3 className="text-3xl md:text-5xl font-display font-bold text-white mb-3">Forged in India.</h3>
-              <p className="text-blue-100 text-xl font-medium">Built to dominate globally.</p>
+              <h3 className="text-3xl md:text-5xl font-display font-bold text-white mb-3">Event Management Dashboard.</h3>
+              <p className="text-blue-100 text-xl font-medium">Create, manage, track — all in one place. Built for scale from 50 to 50,000 attendees.</p>
             </div>
           </div>
         </div>
