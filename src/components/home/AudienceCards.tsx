@@ -65,14 +65,14 @@ export default function AudienceCards() {
               style={{ marginTop: typeof window !== 'undefined' && window.innerWidth >= 768 ? `${i * 3}rem` : '0' }}
             >
               <MagneticElement intensity={0.05} className="h-full">
-                <div className="group h-full bg-surface p-10 rounded-2xl border border-gray-100 hover:border-accent shadow-sm hover:shadow-xl hover:shadow-accent/5 transition-all duration-500 cursor-pointer flex flex-col justify-between">
+                <div className={`group h-full ${i === 0 ? 'bg-[#FDF2F8]' : i === 1 ? 'bg-[#EFF6FF]' : 'bg-[#F5F3FF]'} p-10 rounded-2xl border border-white hover:border-accent shadow-sm hover:shadow-xl hover:shadow-accent/5 transition-all duration-500 cursor-pointer flex flex-col justify-between`}>
                   <div>
                     <div className="text-xs font-bold text-muted uppercase tracking-wider mb-2">{aud.role}</div>
-                    <h3 className="text-2xl font-display font-bold text-text mb-4 group-hover:text-accent transition-colors">{aud.title}</h3>
+                    <h3 className={`text-2xl font-display font-bold text-text mb-4 transition-colors ${i === 0 ? 'group-hover:text-pink-600' : i === 1 ? 'group-hover:text-blue-600' : 'group-hover:text-purple-600'}`}>{aud.title}</h3>
                     <p className="text-muted leading-relaxed">{aud.desc}</p>
                   </div>
                   <div className="mt-8">
-                    <span className="text-accent text-sm font-semibold flex items-center">
+                    <span className={`text-sm font-semibold flex items-center ${i === 0 ? 'text-pink-600' : i === 1 ? 'text-blue-600' : 'text-purple-600'}`}>
                       Explore Advantage 
                       <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />

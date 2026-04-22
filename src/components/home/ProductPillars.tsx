@@ -60,23 +60,23 @@ export default function ProductPillars() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative h-screen w-full overflow-hidden">
+    <section ref={containerRef} className="relative h-screen w-full overflow-hidden bg-black">
       {SCENES.map((scene, i) => (
         <div 
           key={i}
           ref={(el) => { if (el) slidesRef.current[i] = el; }}
-          className={`absolute inset-0 w-full h-full flex items-center justify-center ${i === 0 ? 'bg-[#F8FBFF]' : i === 1 ? 'bg-[#FFFFFF]' : 'bg-[#FAFAF9]'} px-8 pt-28 pb-12 md:py-0 opacity-${i === 0 ? '100' : '0'}`}
+          className={`absolute inset-0 w-full h-full flex items-center justify-center ${i === 0 ? 'bg-[#0B1121]' : i === 1 ? 'bg-[#18181B]' : 'bg-[#0F172A]'} px-8 pt-28 pb-12 md:py-0 opacity-${i === 0 ? '100' : '0'}`}
           style={{ zIndex: i }}
         >
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-text mb-6">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
                 {scene.title}
               </h2>
-              <p className="text-lg md:text-xl text-muted mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
                 {scene.subheadline}
               </p>
-              <button className="bg-text text-white px-8 py-4 rounded-full font-semibold hover:bg-accent transition-colors duration-300">
+              <button className="bg-accent text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-text transition-colors duration-300">
                 {scene.cta}
               </button>
             </div>

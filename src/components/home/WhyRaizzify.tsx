@@ -37,28 +37,28 @@ export default function WhyRaizzify() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(250px,auto)]">
           
-          <div className="bento-item col-span-1 md:col-span-2 row-span-2 bg-[#FFFFFF] p-10 rounded-3xl border border-gray-100 flex flex-col justify-between group hover:border-[#0055FF] hover:shadow-xl transition-all duration-500 overflow-hidden relative">
-            <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-[#0055FF]/[0.03] rounded-full blur-3xl pointer-events-none group-hover:bg-[#0055FF]/[0.05] transition-colors duration-500"/>
+          <div className="bento-item col-span-1 md:col-span-2 row-span-2 bg-[#0B1121] p-10 rounded-3xl border border-gray-800 flex flex-col justify-between group hover:border-[#0055FF] hover:shadow-2xl transition-all duration-500 overflow-hidden relative">
+            <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-[#0055FF]/[0.15] rounded-full blur-3xl pointer-events-none group-hover:bg-[#0055FF]/[0.25] transition-colors duration-500"/>
             <div>
-              <div className="text-xs font-bold text-[#0055FF] uppercase tracking-widest mb-6">The Talent</div>
-              <h3 className="text-4xl font-display font-bold text-text mb-6 leading-tight">Engineered by <br /> IITians & ISBians.</h3>
-              <p className="text-muted leading-relaxed max-w-md text-lg">You are not outsourcing to a generic agency. You are arming yourself with an elite strike team trained at India's most ruthless academic institutions. We architect scale.</p>
+              <div className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-6">The Talent</div>
+              <h3 className="text-4xl font-display font-bold text-white mb-6 leading-tight">Engineered by <br /> IITians & ISBians.</h3>
+              <p className="text-gray-400 leading-relaxed max-w-md text-lg">You are not outsourcing to a generic agency. You are arming yourself with an elite strike team trained at India's most ruthless academic institutions. We architect scale.</p>
             </div>
           </div>
           
-          <div className="bento-item col-span-1 border border-blue-50 bg-[#F8FAFF] p-10 rounded-3xl flex flex-col justify-end group hover:border-[#0055FF] hover:shadow-xl transition-all duration-500 relative overflow-hidden">
-            <div className="absolute top-8 right-8 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm">
-              <svg className="w-5 h-5 text-[#0055FF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="bento-item col-span-1 border border-gray-800 bg-[#0F172A] p-10 rounded-3xl flex flex-col justify-end group hover:border-[#0055FF] hover:shadow-2xl transition-all duration-500 relative overflow-hidden">
+            <div className="absolute top-8 right-8 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shadow-sm">
+              <svg className="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
               </svg>
             </div>
-            <h3 className="text-2xl font-display font-bold text-text mb-3">Fort Knox Security</h3>
-            <p className="text-muted text-sm leading-relaxed">Military-grade encryption and unbreachable payment gateways.</p>
+            <h3 className="text-2xl font-display font-bold text-white mb-3">Fort Knox Security</h3>
+            <p className="text-gray-400 text-sm leading-relaxed">Military-grade encryption and unbreachable payment gateways.</p>
           </div>
           
-          <div className="bento-item col-span-1 border border-gray-100 bg-[#FFFFFF] p-10 rounded-3xl flex flex-col justify-end group hover:border-[#0055FF] hover:shadow-xl transition-all duration-500">
-            <h3 className="text-2xl font-display font-bold text-text mb-3">End-to-End Control</h3>
-            <p className="text-muted text-sm leading-relaxed">From WhatsApp funnels to native apps. All managed in one unified operational spine.</p>
+          <div className="bento-item col-span-1 border border-gray-800 bg-[#18181B] p-10 rounded-3xl flex flex-col justify-end group hover:border-[#0055FF] hover:shadow-2xl transition-all duration-500">
+            <h3 className="text-2xl font-display font-bold text-white mb-3">End-to-End Control</h3>
+            <p className="text-gray-400 text-sm leading-relaxed">From WhatsApp funnels to native apps. All managed in one unified operational spine.</p>
           </div>
           
           <div className="bento-item col-span-1 md:col-span-3 bg-[#0055FF] p-10 md:p-14 rounded-3xl flex flex-col md:flex-row items-center justify-between group overflow-hidden relative">
